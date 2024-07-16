@@ -1,0 +1,103 @@
+.projects-page {
+    &__container {
+        max-width: 1200px;
+        display: flex;
+        flex-direction: column;
+        gap: 64px;
+    }
+
+    &__title {
+        text-align: center;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 64px;
+    }
+}
+
+.projects {
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 20px;
+    }
+
+    &__grid-item {
+        opacity: 0;
+        transform: translateY(20px);
+        transition:
+            opacity 0.6s ease-out,
+            transform 0.6s ease-out;
+
+        &:nth-child(1) {
+            animation: fadeIn 1s 0.2s forwards;
+        }
+        &:nth-child(2) {
+            animation: fadeIn 1s 0.4s forwards;
+        }
+        &:nth-child(3) {
+            animation: fadeIn 1s 0.6s forwards;
+        }
+        &:nth-child(4) {
+            animation: fadeIn 1s 0.8s forwards;
+        }
+        &:nth-child(5) {
+            animation: fadeIn 1s 1s forwards;
+        }
+        &:nth-child(6) {
+            animation: fadeIn 1s 1.2s forwards;
+        }
+        &:nth-child(7) {
+            animation: fadeIn 1s 1.4s forwards;
+        }
+        &:nth-child(8) {
+            animation: fadeIn 1s 1.6s forwards;
+        }
+
+        &.card {
+            background: #121212;
+            color: $color-white;
+            img {
+                object-fit: cover;
+                width: 100%;
+                // height: 100%;
+                transition: transform 0.6s ease-in-out;
+
+                &:hover {
+                    cursor: pointer;
+                    transform: scale(1.1);
+                }
+            }
+
+            &__content {
+                padding: 20px;
+                background: #fff;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+
+            &__title {
+                font-size: 24px;
+                margin-bottom: 10px;
+            }
+
+            &__description {
+                font-size: 16px;
+                color: #ededed;
+                margin-bottom: 10px;
+            }
+
+            &__link {
+            }
+        }
+    }
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -2,15 +2,12 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Icon } from "./Icon";
+import HeaderLogo from "./HeaderLogo";
 
 const Header: React.FC = () => {
   return (
     <header className="header">
-      <div className="header__logo logo">
-        <Link href="/" passHref className="logo__link">
-          qpd. <span className="logo__text">quality product design</span>
-        </Link>
-      </div>
+      <HeaderLogo />
       <nav className="header__nav nav">
         <ul className="nav__list">
           <li className="nav__item">
@@ -41,13 +38,13 @@ const Header: React.FC = () => {
           </li>
         </ul>
       </nav>
-      <Icon
+      {/* <Icon
         className="burger-menu"
         name="menu"
         width={100}
         height={100}
         color="--color-primary"
-      />
+      /> */}
     </header>
   );
 };

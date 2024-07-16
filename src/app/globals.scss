@@ -23,9 +23,11 @@ body {
   overflow-x: hidden;
   background: #000;
   // background: linear-gradient(to right, black 50%, white 50%);
-  background: linear-gradient(-45deg, white 50%, black 50%);
   // background: linear-gradient(to bottom right, black 50%, white 50%);
   // background: linear-gradient(135deg, black 25%, white 75%);
+
+  // background: linear-gradient(-45deg, white 50%, black 50%);
+
 }
 
 .wrapper {
@@ -39,7 +41,7 @@ body {
   color: $color-secondary;
 }
 
-a {
+a, .link {
   text-decoration: none;
   color: $color-white;
 }
@@ -53,7 +55,7 @@ a {
   width: fit-content;
   border-radius: 64px;
   border: 2px solid $color-primary;
-  font-size: 32px;
+  font-size: 28px;
   text-transform: uppercase;
   padding: 24px 48px;
   background: transparent;
